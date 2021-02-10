@@ -26,6 +26,12 @@ public class HelloWorldController {
 		return "Service is up";
 
 	}
+	
+	@RequestMapping(method = RequestMethod.GET, produces = "application/json", path = "/test/approval")
+	public String manualApproval() {
+		return "Service is Deployed after aprroval";
+
+	}
 
 	@RequestMapping(method = RequestMethod.POST, produces = "application/json")
 	public ResponseEntity helloWorldPost(@RequestParam(value = "name", defaultValue = "World") String name) {
